@@ -36,11 +36,11 @@
         ga('send', 'pageview');
 
         function handleOutboundLinkClicks(event) {
-          ga('send', 'event', {
-            eventCategory: 'Contact Link',
-            eventAction: 'click',
-            eventLabel: event.target.href
-          });
+            ga('send', 'event', {
+                eventCategory: event.name,
+                eventAction: 'click',
+                eventLabel: event.target.href
+            });
         }
     </script>
 </head>
@@ -51,7 +51,7 @@
             <a class="pure-menu-heading" href="">BERYL8</a>
 
             <ul class="pure-menu-list">
-                <li class="pure-menu-item"><a href="http://www.beryl8.com/" class="pure-menu-link" onclick="handleOutboundLinkClicks(this)">Contact</a></li>
+                <li class="pure-menu-item"><a name="Contact Link" href="http://www.beryl8.com/" class="pure-menu-link" onclick="handleOutboundLinkClicks(this)">Contact</a></li>
             </ul>
         </div>
     </div>

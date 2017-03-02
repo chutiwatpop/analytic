@@ -28,12 +28,13 @@
             // var signInForm = document.getElementById("signInForm");
             var userId = document.getElementById("userId").value;
             if(userId) {
+                ga('set', 'userId', userId);
                 document.getElementById("signInForm").style.display = "none";
                 document.getElementById("displayUserName").style.display = "block";
                 document.getElementById("userIdDisplay").value = userId;
                 
                 console.log('userId:' + userId);
-                ga('set', 'userId', {{userId}});
+                
             } else {
                 alert('Username cannot be empty');
             }

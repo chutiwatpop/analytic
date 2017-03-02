@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="be8, analytics, be8-analytics">
-    <meta name="description" content="This is be8-analytics web">
+    <meta name="keywords" content="Beryl8, be8, analytics, Beryl8-analytics, be8-analytics, Beryl8 analytics, be8 analytics, analytics web">
+    <meta name="description" content="Beryl8 analytics website (be8-analytics web).">
 
     <title>BE8 &ndash; Analytics &ndash; Web</title>
 
@@ -34,27 +34,33 @@
 
         ga('create', 'UA-92797728-1', 'auto');
         ga('send', 'pageview');
+
+        function handleOutboundLinkClicks(event) {
+          ga('send', 'event', {
+            eventCategory: 'Contact Link',
+            eventAction: 'click',
+            eventLabel: event.target.href
+          });
+        }
     </script>
 </head>
 <body>
 
     <div class="header">
         <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-            <a class="pure-menu-heading" href="">BE8 Analytics Web</a>
+            <a class="pure-menu-heading" href="">BERYL8</a>
 
             <ul class="pure-menu-list">
-                <li class="pure-menu-item pure-menu-selected"><a href="#" class="pure-menu-link">Home</a></li>
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Tour</a></li>
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Sign Up</a></li>
+                <li class="pure-menu-item"><a href="http://www.beryl8.com/" class="pure-menu-link" onclick="handleOutboundLinkClicks(this)">Contact</a></li>
             </ul>
         </div>
     </div>
 
     <div class="splash-container">
         <div class="splash">
-            <h1 class="splash-head">BE8 Analytics Web</h1>
+            <h1 class="splash-head">BERYL8 Analytics</h1>
             <p class="splash-subhead">
-                For analytics. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                BE8 analytics web.
             </p>
             <p>
                 <a href="main.html" class="pure-button pure-button-primary">Get Started</a>
@@ -63,7 +69,7 @@
     </div>
 
     <div class="footer l-box is-center">
-        BE8 Analytics Web. Test analytics.
+        Beryl8 Analytics Website. Test analytics.
     </div>
 
 </div>

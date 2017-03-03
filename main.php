@@ -84,7 +84,7 @@
     echo "Fuck";
     $doc = new DomDocument;
     $doc->getElementById('php-basics');
-    echo '<script>document.getElementById("userIdDisplay").value</script>';
+    echo "<script>document.getElementById("userIdDisplay").value</script>";
     
 ?>
 <div id="layout">

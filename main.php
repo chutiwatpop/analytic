@@ -9,6 +9,7 @@
     <?php
     // Start the session
     session_start();
+    echo "session_start";
     ?>    
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -83,7 +84,7 @@
     $doc = new DomDocument;
     $doc->getElementById('php-basics')
     $_SESSION["userId"] = $doc->name;
-    echo "Session userId=:" + ;
+    echo "Session userId=:" + $_SESSION["userId"];
 ?>
 <div id="layout">
     <!-- Menu toggle -->

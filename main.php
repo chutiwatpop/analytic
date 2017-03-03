@@ -80,15 +80,6 @@
 </head>
 <body>
 <div id="layout">
-    <div style="text-align: right;">
-        <?php
-            // Set session variables
-            echo "Fuck:" + $_POST['userId'];
-
-            echo '<script>document.getElementById("userIdDisplay").value</script>';
-            
-        ?>
-    </div>
     <!-- Menu toggle -->
     <a href="#menu" id="menuLink" class="menu-link">
         <!-- Hamburger icon -->
@@ -112,12 +103,23 @@
 
     <div id="main">
         <div>
-            <form id="signInForm" class="pure-form" style="text-align: right" onSubmit="return signIn()">
+            <form id="signInForm" class="pure-form" style="text-align: right" method="post" action="<?=$_SERVER['PHP_SELF']?>" onSubmit="return signIn()">
                 <fieldset>
                     <input type="text" id="userId" name="userId" placeholder="Username">
-                    <button type="submit" class="pure-button pure-button-primary">Sign in</button>
+                    <button name="submit" type="submit" class="pure-button pure-button-primary">Sign in</button>
                 </fieldset>
             </form>
+            <div style="text-align: right;">
+                <?php
+                    echo '<script>document.getElementById("userIdDisplay").value</script>';
+                    if (isset($_POST['submit'])) {
+                        $userIdValue = $_POST['userId'];
+                        echo 'userIdValue: ' . $userIdValue;
+                    }
+                ?>
+            </div>
+
+
             <div id="displayUserName" style="text-align: right;display: none; padding: 16px">
                 Login as <b><output id="userIdDisplay" for="userId"></output></b>
             </div>

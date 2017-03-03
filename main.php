@@ -84,11 +84,7 @@
         <?php
             // Set session variables
             echo "Fuck:" + $_POST['userId'];
-            $doc = new DomDocument;
-            $doc->getElementById('userId');
-            if($doc) {
-                echo $doc;
-            }
+
             echo '<script>document.getElementById("userIdDisplay").value</script>';
             
         ?>

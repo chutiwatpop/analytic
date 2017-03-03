@@ -1,7 +1,4 @@
-<?php
-    // Start the session
-    session_start();
-    ?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Beryl8, be8, analytics, Beryl8-analytics, be8-analytics, Beryl8 analytics, be8 analytics, analytics web">
     <meta name="description" content="Beryl8 analytics main page (be8-analytics main).">
-    
+    <?php
+    // Start the session
+    session_start();
+    ?>    
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

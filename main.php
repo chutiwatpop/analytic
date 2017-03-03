@@ -87,7 +87,7 @@
             $doc = new DomDocument;
             $doc->getElementById('userId');
             if($doc) {
-                echo (string)$doc;
+                echo $doc;
             }
             echo '<script>document.getElementById("userIdDisplay").value</script>';
             

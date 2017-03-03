@@ -79,14 +79,6 @@
         <!--<![endif]-->
 </head>
 <body>
-<?php
-    // Set session variables
-    echo "Fuck:" + $_POST['userId'];
-    $doc = new DomDocument;
-    $doc->getElementById('php-basics');
-    echo '<script>document.getElementById("userIdDisplay").value</script>';
-    
-?>
 <div id="layout">
     <!-- Menu toggle -->
     <a href="#menu" id="menuLink" class="menu-link">
@@ -110,6 +102,17 @@
     </div>
 
     <div id="main">
+        <?php
+            // Set session variables
+            echo "Fuck:" + $_POST['userId'];
+            $doc = new DomDocument;
+            $doc->getElementById('userId');
+            if($doc) {
+                echo $doc;
+            }
+            echo '<script>document.getElementById("userIdDisplay").value</script>';
+            
+        ?>
         <div>
             <form id="signInForm" class="pure-form" style="text-align: right" onSubmit="return signIn()">
                 <fieldset>

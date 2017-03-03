@@ -80,6 +80,19 @@
 </head>
 <body>
 <div id="layout">
+    <div style="text-align: right;">
+        <?php
+            // Set session variables
+            echo "Fuck:" + $_POST['userId'];
+            $doc = new DomDocument;
+            $doc->getElementById('userId');
+            if($doc) {
+                echo (string)$doc;
+            }
+            echo '<script>document.getElementById("userIdDisplay").value</script>';
+            
+        ?>
+    </div>
     <!-- Menu toggle -->
     <a href="#menu" id="menuLink" class="menu-link">
         <!-- Hamburger icon -->
@@ -104,17 +117,6 @@
     <div id="main">
         <div>
             <form id="signInForm" class="pure-form" style="text-align: right" onSubmit="return signIn()">
-            <?php
-                // Set session variables
-                echo "Fuck:" + $_POST['userId'];
-                $doc = new DomDocument;
-                $doc->getElementById('userId');
-                if($doc) {
-                    echo $doc;
-                }
-                echo '<script>document.getElementById("userIdDisplay").value</script>';
-                
-            ?>
                 <fieldset>
                     <input type="text" id="userId" name="userId" placeholder="Username">
                     <button type="submit" class="pure-button pure-button-primary">Sign in</button>

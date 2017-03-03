@@ -83,8 +83,8 @@
     // Set session variables
     $doc = new DomDocument;
     $doc->getElementById('php-basics')
-    echo "Session docname=:" + $doc->name;
-    $_SESSION["userId"] = $doc->name;
+    echo "Session docname=:" + $doc->value;
+    $_SESSION["userId"] = $doc->value;
     echo "Session userId=:" + $_SESSION["userId"];
 ?>
 <div id="layout">

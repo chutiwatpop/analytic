@@ -82,8 +82,12 @@
 <?php
     // Set session variables
     $doc = new DomDocument;
-    $doc->getElementById('php-basics')
-  
+    $doc->getElementById('php-basics');
+    echo $doc;
+    echo '<script>document.getElementById("userIdDisplay").value<script>';
+    // echo "Session docname=:" + $doc->tagname;
+    // $_SESSION["userId"] = $doc->value;
+    // echo "Session userId=:" + $_SESSION["userId"];
 ?>
 <div id="layout">
     <!-- Menu toggle -->

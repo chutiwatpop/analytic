@@ -81,6 +81,7 @@
 <body>
 <?php
     // Set session variables
+    echo "Fuck";
     $doc = new DomDocument;
     $doc->getElementById('php-basics');
     echo '<script>document.getElementById("userIdDisplay").value<script>';

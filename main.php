@@ -84,10 +84,8 @@
     echo "Fuck";
     $doc = new DomDocument;
     $doc->getElementById('php-basics');
-    echo '<script>document.getElementById("userIdDisplay").value<script>';
-    // echo "Session docname=:" + $doc->tagname;
-    // $_SESSION["userId"] = $doc->value;
-    // echo "Session userId=:" + $_SESSION["userId"];
+    echo '<script>document.getElementById("userIdDisplay").value</script>';
+    
 ?>
 <div id="layout">
     <!-- Menu toggle -->

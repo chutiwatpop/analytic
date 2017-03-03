@@ -42,6 +42,10 @@
                 eventLabel: event.target.href
             });
         }
+
+        function goTo() {
+            window.location = 'https://be8-analytics.herokuapp.com/main.php';
+        }
     </script>
 </head>
 <body>
@@ -63,7 +67,8 @@
                 BE8 analytics web.
             </p>
             <p>
-                <a href="main.php" class="pure-button pure-button-primary">Get Started</a>
+                <!-- <a href="main.php" class="pure-button pure-button-primary">Get Started</a> -->
+                <a class="pure-button pure-button-primary" onclick="goTo()">Get Started</a>
             </p>
         </div>
     </div>

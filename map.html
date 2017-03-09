@@ -13,38 +13,32 @@
     <div id="map"></div>
     <script>
       function initMap() {
-        var uluru = {lat: -25.363, lng: 131.044};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 6,
-          center: {lat: -34.397, lng: 150.644}
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-
-        // Draw
-        var drawingManager = new google.maps.drawing.DrawingManager({
-          drawingMode: google.maps.drawing.OverlayType.MARKER,
-          drawingControl: true,
-          drawingControlOptions: {
-            position: google.maps.ControlPosition.TOP_CENTER,
-            drawingModes: ['marker', 'circle', 'polygon', 'polyline', 'rectangle']
-          },
-          markerOptions: {icon: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'},
-          circleOptions: {
-            fillColor: '#ffff00',
-            fillOpacity: 1,
-            strokeWeight: 5,
-            clickable: false,
-            editable: true,
-            zIndex: 1
-          }
-        });
-        drawingManager.setMap(map);
+        // // Draw
+        // var drawingManager = new google.maps.drawing.DrawingManager({
+        //   drawingMode: google.maps.drawing.OverlayType.MARKER,
+        //   drawingControl: true,
+        //   drawingControlOptions: {
+        //     position: google.maps.ControlPosition.TOP_CENTER,
+        //     drawingModes: ['marker', 'circle', 'polygon', 'polyline', 'rectangle']
+        //   },
+        //   markerOptions: {icon: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'},
+        //   circleOptions: {
+        //     fillColor: '#ffff00',
+        //     fillOpacity: 1,
+        //     strokeWeight: 5,
+        //     clickable: false,
+        //     editable: true,
+        //     zIndex: 1
+        //   }
+        // });
+        // drawingManager.setMap(map);
 
         // Geolocation
         var infoWindow = new google.maps.InfoWindow({map: map});
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 6        
+        });
 
         // Try HTML5 geolocation.
         if (navigator.geolocation) {
@@ -63,7 +57,19 @@
         } else {
           // Browser doesn't support Geolocation
           handleLocationError(false, infoWindow, map.getCenter());
+          var pos = {
+              lat: 0,
+              lng: 0
+            };
+          map.setCenter(pos);
         }
+
+        var uluru = {lat: 52, lng: 172};
+        
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
       }
 
       function handleLocationError(browserHasGeolocation, infoWindow, pos) {

@@ -95,6 +95,7 @@
                 <li class="pure-menu-item" class="menu-item-divided pure-menu-selected">
                     <a href="map.html" class="pure-menu-link">Map</a>
                 </li>
+                <li class="pure-menu-item"><a href="analytics.html" class="pure-menu-link">Test</a></li>
                 <li class="pure-menu-item"><a href="pricing.html" class="pure-menu-link">Pricing</a></li>
             </ul>
         </div>

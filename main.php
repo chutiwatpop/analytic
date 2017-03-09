@@ -93,7 +93,7 @@
                 <li class="pure-menu-item"><a href="#" class="pure-menu-link">Home</a></li>
                 <li class="pure-menu-item"><a href="blog.html" class="pure-menu-link">Blog</a></li>
                 <li class="pure-menu-item" class="menu-item-divided pure-menu-selected">
-                    <a href="email.html" class="pure-menu-link">Email</a>
+                    <a href="map.html" class="pure-menu-link">Map</a>
                 </li>
                 <li class="pure-menu-item"><a href="pricing.html" class="pure-menu-link">Pricing</a></li>
             </ul>
